@@ -27,9 +27,3 @@ jobs:
       run: pod update
     - name: Build archive
       run: xcodebuild -sdk iphoneos -workspace Integrate\ CICD.xcworkspace -configuration Release -scheme Integrate\ CICD -derivedDataPath DerivedData -archivePath DerivedData/Archive/Integrate\ CICD archive
-    - name: Export Archive
-      run: xcodebuild -exportArchive -archivePath DerivedData/Archive/Integrate\ CICD.xcarchive -exportOptionsPlist provisioning/App-Store.plist -exportPath DerivedData/ipa
-    - name: Dump file hierarchy
-      run: ls -R
-    - name: Deploy App to Apple
-      run: xcrun altool --upload-app --type ios --file DerivedData/ipa/Integrate\ CICD.ipa --username "${{ secrets.APPSTORE_CONNECT_USERNAME }}" --password "${{ secrets.APPSTORE_CONNECT_PASSWORD }}" --verbose

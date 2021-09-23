@@ -194,6 +194,7 @@
 				210A22CA26FC945E00546FB8 /* Frameworks */,
 				210A22CB26FC945E00546FB8 /* Resources */,
 				68AE3E9CBA7FF847CA9B741E /* [CP] Embed Pods Frameworks */,
+				E7A89067C3BB37F19268D2AA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,6 +233,7 @@
 				210A22EB26FC946000546FB8 /* Frameworks */,
 				210A22EC26FC946000546FB8 /* Resources */,
 				9AFDC7533626D43A3A335A03 /* [CP] Embed Pods Frameworks */,
+				24B1C62CC16A7262F7383AA0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,6 +317,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		24B1C62CC16A7262F7383AA0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Integrate CICD-Integrate CICDUITests/Pods-Integrate CICD-Integrate CICDUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Integrate CICD-Integrate CICDUITests/Pods-Integrate CICD-Integrate CICDUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Integrate CICD-Integrate CICDUITests/Pods-Integrate CICD-Integrate CICDUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		40576E10A45BA642217A05F1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,6 +432,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Integrate CICD-Integrate CICDUITests/Pods-Integrate CICD-Integrate CICDUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7A89067C3BB37F19268D2AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Integrate CICD/Pods-Integrate CICD-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Integrate CICD/Pods-Integrate CICD-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Integrate CICD/Pods-Integrate CICD-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
