@@ -17,9 +17,6 @@
 		210A22F326FC946000546FB8 /* Integrate_CICDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A22F226FC946000546FB8 /* Integrate_CICDUITests.swift */; };
 		210A230626FCB57600546FB8 /* App-Store.plist in Resources */ = {isa = PBXBuildFile; fileRef = 210A230126FCB57600546FB8 /* App-Store.plist */; };
 		210A230726FCB57600546FB8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 210A230226FCB57600546FB8 /* README.md */; };
-		210A230926FCB57600546FB8 /* import_provisioning.sh in Resources */ = {isa = PBXBuildFile; fileRef = 210A230426FCB57600546FB8 /* import_provisioning.sh */; };
-		210A230C26FCBB1500546FB8 /* AppStoreCertificates.p12.gpg in Resources */ = {isa = PBXBuildFile; fileRef = 210A230B26FCBB1500546FB8 /* AppStoreCertificates.p12.gpg */; };
-		210A230E26FCBB2200546FB8 /* CocoaHeadsNL-AppStore.mobileprovision.gpg in Resources */ = {isa = PBXBuildFile; fileRef = 210A230D26FCBB2200546FB8 /* CocoaHeadsNL-AppStore.mobileprovision.gpg */; };
 		65478DA3291029CCEBECA5AB /* Pods_Integrate_CICD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41593F379714E911D16EAE33 /* Pods_Integrate_CICD.framework */; };
 		D288572BEE7698DC64AA4AEB /* Pods_Integrate_CICD_Integrate_CICDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E5024E5412DD3201A7F0D6 /* Pods_Integrate_CICD_Integrate_CICDUITests.framework */; };
 		FB1E1F18A3B7D3613AB2BCD5 /* Pods_Integrate_CICDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B1E414A60FD6CF76C9A4A7 /* Pods_Integrate_CICDTests.framework */; };
@@ -61,9 +58,6 @@
 		210A22F426FC946000546FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		210A230126FCB57600546FB8 /* App-Store.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "App-Store.plist"; sourceTree = "<group>"; };
 		210A230226FCB57600546FB8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		210A230426FCB57600546FB8 /* import_provisioning.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = import_provisioning.sh; sourceTree = "<group>"; };
-		210A230B26FCBB1500546FB8 /* AppStoreCertificates.p12.gpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppStoreCertificates.p12.gpg; sourceTree = "<group>"; };
-		210A230D26FCBB2200546FB8 /* CocoaHeadsNL-AppStore.mobileprovision.gpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CocoaHeadsNL-AppStore.mobileprovision.gpg"; sourceTree = "<group>"; };
 		41593F379714E911D16EAE33 /* Pods_Integrate_CICD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Integrate_CICD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E5024E5412DD3201A7F0D6 /* Pods_Integrate_CICD_Integrate_CICDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Integrate_CICD_Integrate_CICDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79143B66124724FF86A872A9 /* Pods-Integrate CICD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Integrate CICD.debug.xcconfig"; path = "Target Support Files/Pods-Integrate CICD/Pods-Integrate CICD.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,9 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				210A230126FCB57600546FB8 /* App-Store.plist */,
-				210A230B26FCBB1500546FB8 /* AppStoreCertificates.p12.gpg */,
-				210A230D26FCBB2200546FB8 /* CocoaHeadsNL-AppStore.mobileprovision.gpg */,
-				210A230426FCB57600546FB8 /* import_provisioning.sh */,
 				210A230226FCB57600546FB8 /* README.md */,
 			);
 			path = provisioning;
@@ -299,12 +290,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210A230926FCB57600546FB8 /* import_provisioning.sh in Resources */,
 				210A230726FCB57600546FB8 /* README.md in Resources */,
 				210A22DD26FC946000546FB8 /* LaunchScreen.storyboard in Resources */,
-				210A230E26FCBB2200546FB8 /* CocoaHeadsNL-AppStore.mobileprovision.gpg in Resources */,
 				210A230626FCB57600546FB8 /* App-Store.plist in Resources */,
-				210A230C26FCBB1500546FB8 /* AppStoreCertificates.p12.gpg in Resources */,
 				210A22DA26FC946000546FB8 /* Assets.xcassets in Resources */,
 				210A22D826FC945E00546FB8 /* Main.storyboard in Resources */,
 			);
