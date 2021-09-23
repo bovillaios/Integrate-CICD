@@ -10,7 +10,7 @@ mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 echo "List profiles"
 ls ~/Library/MobileDevice/Provisioning\ Profiles/
 echo "Move profiles"
-cp provisioning/*.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
+cp ./.github/secrets/*.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
 echo "List profiles"
 ls ~/Library/MobileDevice/Provisioning\ Profiles/
 
