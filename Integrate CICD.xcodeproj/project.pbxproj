@@ -15,6 +15,11 @@
 		210A22DD26FC946000546FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210A22DB26FC946000546FB8 /* LaunchScreen.storyboard */; };
 		210A22E826FC946000546FB8 /* Integrate_CICDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A22E726FC946000546FB8 /* Integrate_CICDTests.swift */; };
 		210A22F326FC946000546FB8 /* Integrate_CICDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A22F226FC946000546FB8 /* Integrate_CICDUITests.swift */; };
+		210A230526FCB57600546FB8 /* AppStoreCertificates.p12.gpg in Resources */ = {isa = PBXBuildFile; fileRef = 210A230026FCB57600546FB8 /* AppStoreCertificates.p12.gpg */; };
+		210A230626FCB57600546FB8 /* App-Store.plist in Resources */ = {isa = PBXBuildFile; fileRef = 210A230126FCB57600546FB8 /* App-Store.plist */; };
+		210A230726FCB57600546FB8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 210A230226FCB57600546FB8 /* README.md */; };
+		210A230826FCB57600546FB8 /* CocoaHeadsNL-AppStore.mobileprovision.gpg in Resources */ = {isa = PBXBuildFile; fileRef = 210A230326FCB57600546FB8 /* CocoaHeadsNL-AppStore.mobileprovision.gpg */; };
+		210A230926FCB57600546FB8 /* import_provisioning.sh in Resources */ = {isa = PBXBuildFile; fileRef = 210A230426FCB57600546FB8 /* import_provisioning.sh */; };
 		65478DA3291029CCEBECA5AB /* Pods_Integrate_CICD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41593F379714E911D16EAE33 /* Pods_Integrate_CICD.framework */; };
 		D288572BEE7698DC64AA4AEB /* Pods_Integrate_CICD_Integrate_CICDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E5024E5412DD3201A7F0D6 /* Pods_Integrate_CICD_Integrate_CICDUITests.framework */; };
 		FB1E1F18A3B7D3613AB2BCD5 /* Pods_Integrate_CICDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B1E414A60FD6CF76C9A4A7 /* Pods_Integrate_CICDTests.framework */; };
@@ -54,6 +59,11 @@
 		210A22EE26FC946000546FB8 /* Integrate CICDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Integrate CICDUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		210A22F226FC946000546FB8 /* Integrate_CICDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integrate_CICDUITests.swift; sourceTree = "<group>"; };
 		210A22F426FC946000546FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		210A230026FCB57600546FB8 /* AppStoreCertificates.p12.gpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppStoreCertificates.p12.gpg; sourceTree = "<group>"; };
+		210A230126FCB57600546FB8 /* App-Store.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "App-Store.plist"; sourceTree = "<group>"; };
+		210A230226FCB57600546FB8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		210A230326FCB57600546FB8 /* CocoaHeadsNL-AppStore.mobileprovision.gpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CocoaHeadsNL-AppStore.mobileprovision.gpg"; sourceTree = "<group>"; };
+		210A230426FCB57600546FB8 /* import_provisioning.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = import_provisioning.sh; sourceTree = "<group>"; };
 		41593F379714E911D16EAE33 /* Pods_Integrate_CICD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Integrate_CICD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E5024E5412DD3201A7F0D6 /* Pods_Integrate_CICD_Integrate_CICDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Integrate_CICD_Integrate_CICDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79143B66124724FF86A872A9 /* Pods-Integrate CICD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Integrate CICD.debug.xcconfig"; path = "Target Support Files/Pods-Integrate CICD/Pods-Integrate CICD.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +117,7 @@
 		210A22C426FC945E00546FB8 = {
 			isa = PBXGroup;
 			children = (
+				210A230A26FCB58500546FB8 /* provisioning */,
 				210A22CF26FC945E00546FB8 /* Integrate CICD */,
 				210A22E626FC946000546FB8 /* Integrate CICDTests */,
 				210A22F126FC946000546FB8 /* Integrate CICDUITests */,
@@ -156,6 +167,18 @@
 				210A22F426FC946000546FB8 /* Info.plist */,
 			);
 			path = "Integrate CICDUITests";
+			sourceTree = "<group>";
+		};
+		210A230A26FCB58500546FB8 /* provisioning */ = {
+			isa = PBXGroup;
+			children = (
+				210A230126FCB57600546FB8 /* App-Store.plist */,
+				210A230026FCB57600546FB8 /* AppStoreCertificates.p12.gpg */,
+				210A230326FCB57600546FB8 /* CocoaHeadsNL-AppStore.mobileprovision.gpg */,
+				210A230426FCB57600546FB8 /* import_provisioning.sh */,
+				210A230226FCB57600546FB8 /* README.md */,
+			);
+			path = provisioning;
 			sourceTree = "<group>";
 		};
 		3CBF56C09C31438323A2C030 /* Frameworks */ = {
@@ -276,7 +299,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				210A230926FCB57600546FB8 /* import_provisioning.sh in Resources */,
+				210A230826FCB57600546FB8 /* CocoaHeadsNL-AppStore.mobileprovision.gpg in Resources */,
+				210A230726FCB57600546FB8 /* README.md in Resources */,
 				210A22DD26FC946000546FB8 /* LaunchScreen.storyboard in Resources */,
+				210A230626FCB57600546FB8 /* App-Store.plist in Resources */,
+				210A230526FCB57600546FB8 /* AppStoreCertificates.p12.gpg in Resources */,
 				210A22DA26FC946000546FB8 /* Assets.xcassets in Resources */,
 				210A22D826FC945E00546FB8 /* Main.storyboard in Resources */,
 			);
@@ -585,15 +613,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5N2C5A6JW7;
 				INFOPLIST_FILE = "Integrate CICD/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pruthvi.Integrate-CICD";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pruthvi.IntegrationCICD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = IntegrationCICD;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -605,15 +636,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5N2C5A6JW7;
 				INFOPLIST_FILE = "Integrate CICD/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pruthvi.Integrate-CICD";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pruthvi.IntegrationCICD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = IntegrationCICD;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -625,7 +659,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Integrate CICDTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -635,6 +672,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pruthvi.Integrate-CICDTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Integrate CICD.app/Integrate CICD";
@@ -647,7 +686,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Integrate CICDTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -657,6 +699,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pruthvi.Integrate-CICDTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Integrate CICD.app/Integrate CICD";
@@ -668,7 +712,8 @@
 			baseConfigurationReference = FFCD44407433FFB552493892 /* Pods-Integrate CICD-Integrate CICDUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Integrate CICDUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -677,6 +722,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pruthvi.Integrate-CICDUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Integrate CICD";
@@ -688,7 +735,8 @@
 			baseConfigurationReference = 1DB423BE512708B45CB3A014 /* Pods-Integrate CICD-Integrate CICDUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Integrate CICDUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -697,6 +745,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pruthvi.Integrate-CICDUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Integrate CICD";
