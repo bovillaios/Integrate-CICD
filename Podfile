@@ -10,16 +10,11 @@ target 'Integrate CICD' do
   pod "GooglePlaces"
   pod "GooglePlacePicker"
   pod "GoogleMaps"
- # pod "AXPhotoViewer"
-  #pod 'Localize-Swift'
- # pod "FlagPhoneNumber"
- # pod "IQKeyboardManager"
- # pod 'BarcodeScanner'
+  pod "AXPhotoViewer"
+  pod "FlagPhoneNumber"
   pod 'Firebase/Core'
-  pod 'SwiftGen'
-  pod 'SwiftLint'
-   pod 'Firebase/Messaging'
-   pod 'Firebase/Performance'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Performance'
   target 'Integrate CICDTests' do
     inherit! :search_paths
     # Pods for testing
