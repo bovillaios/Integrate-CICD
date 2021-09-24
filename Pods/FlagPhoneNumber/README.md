@@ -40,19 +40,12 @@ Simply add in your `Podfile` the following line:
 pod "FlagPhoneNumber"
 ```
 
-### Manually
-
-Simply import the Sources repository in your project.
-
-#### 👴🏻 Objective-C is supported 
-
-
 ## 🗺 Usage
 
 You can instantiate it in storyboards/xibs or programmatically:
 
 ```swift
-let phoneNumberTextField = FPNTextField(frame: CGRect(x: 0, y: 0, width: view.bounds.width - 16, height: 50))
+let phoneNumberTextField = FlagPhoneNumberTextField(frame: CGRect(x: 0, y: 0, width: view.bounds.width - 16, height: 50))
 
 // You can change the chosen flag then set the phone number
 phoneNumberTextField.setFlag(for: .FR)
@@ -70,24 +63,15 @@ FPNTextFieldDelegate inherites from UITextFieldDelegate so nothing change:
 phoneNumberTextField.delegate = self
 ```
 
-It provides you three methods:
+It provides two methods that lets you know when a country is selected and when the phone number is valid or not. Once a phone number is valid, you can get it in severals formats (E164, International, National, RFC3966):
 
 ```swift
 extension YourViewController: FPNTextFieldDelegate {
 
-   /// The place to present/push the listController if you choosen displayMode = .list
-   func fpnDisplayCountryList() {
-      let navigationViewController = UINavigationController(rootViewController: listController)
-      
-      present(navigationViewController, animated: true, completion: nil)
-   }
-
-   /// Lets you know when a country is selected 
    func fpnDidSelectCountry(name: String, dialCode: String, code: String) {
       print(name, dialCode, code) // Output "France", "+33", "FR"
    }
 
-   /// Lets you know when the phone number is valid or not. Once a phone number is valid, you can get it in severals formats (E164, International, National, RFC3966)
    func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
       if isValid {
          // Do something...         
@@ -105,39 +89,25 @@ extension YourViewController: FPNTextFieldDelegate {
 
 ## 🎨 Customization
 
-By default, the picker view is showed but you can display the countries with a list view controller:
-
-```swift
-var listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
-
-phoneNumberTextField.displayMode = .list // .picker by default
-
-listController.setup(repository: textField.countryRepository)
-listController.didSelect = { [weak self] country in
-self?.textField.setFlag(countryCode: country.code)
-```
-
-Don't forget to implement the `fpnDisplayCountryList`:
-
-```swift
-func fpnDisplayCountryList() {
-   let navigationViewController = UINavigationController(rootViewController: listController)
-
-   listController.title = "Countries"
-
-   self.present(navigationViewController, animated: true, completion: nil)
-}
-```
-
 FlagKit is used by default but you can customize the list with your own flag icons assets:
 ```swift
 // Be sure to set it before initializing a FlagPhoneNumber instance.
 Bundle.FlagIcons = YOUR_FLAG_ICONS_BUNDLE
 ```
 
-You can change the size of the flag button:
+You can change the size of the flag:
 ```swift
-phoneNumberTextField.flagButtonSize = CGSize(width: 44, height: 44)
+phoneNumberTextField.flagSize = CGSize(width: 44, height: 44)
+```
+
+You can change the edge insets of the flag:
+```swift
+phoneNumberTextField.flagButtonEdgeInsets = UIEdgeInsetsMake(5, 10, 5, 10)
+```
+
+If you set the parentViewController programmatically or from `@IBOutlet`,  a search button appears in the picker inputAccessoryView to present a country search view controller:
+```swift
+phoneNumberTextField.parentViewController = self // or from @IBOutlet
 ```
 
 You can customize the inputAccessoryView of the textfield:
@@ -169,16 +139,17 @@ Or exclude countries from the list:
 phoneNumberTextField.setCountries(excluding: [.AM, .BW, .BA])
 ```
 
-You can choose to display the country phone code in the picker or in the list view controller:
-```swift
-phoneNumberTextField.pickerView.showCountryPhoneCode = false // true by default
-listController.showCountryPhoneCode = false // true by default
-```
 
-You can reuses `FPN` classes as you see fit !
+## ✨ Next Improvments
+- [x] Localization
+- [x] Country search
+- [x] Placeholder
+- [x] Exclude/Include countries
+- [ ] Any idea ?
 
 ## ☕️ Conception
-This library uses libPhoneNumber-iOS library (https://github.com/iziz/libPhoneNumber-iOS)
+This library is high inspired of MRCountryPicker library and use libPhoneNumber-iOS library.
+https://github.com/xtrinch/MRCountryPicker / https://github.com/iziz/libPhoneNumber-iOS
 
 Open source time proudly sponsored by Chronotruck.
 
