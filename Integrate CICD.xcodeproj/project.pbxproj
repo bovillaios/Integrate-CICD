@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,12 +17,6 @@
 		210A22F326FC946000546FB8 /* Integrate_CICDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A22F226FC946000546FB8 /* Integrate_CICDUITests.swift */; };
 		210A230626FCB57600546FB8 /* App-Store.plist in Resources */ = {isa = PBXBuildFile; fileRef = 210A230126FCB57600546FB8 /* App-Store.plist */; };
 		210A230726FCB57600546FB8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 210A230226FCB57600546FB8 /* README.md */; };
-		210E2DA526FD9334008C8FAA /* PINRemoteImage in Frameworks */ = {isa = PBXBuildFile; productRef = 210E2DA426FD9334008C8FAA /* PINRemoteImage */; };
-		210E2DA826FD99F1008C8FAA /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 210E2DA726FD99F1008C8FAA /* SwiftLintFramework */; };
-		210E2DAB26FD9A3F008C8FAA /* SwiftGenKit in Frameworks */ = {isa = PBXBuildFile; productRef = 210E2DAA26FD9A3F008C8FAA /* SwiftGenKit */; };
-		210E2DAE26FD9A83008C8FAA /* BarcodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 210E2DAD26FD9A83008C8FAA /* BarcodeScanner */; };
-		210E2DB126FD9ACE008C8FAA /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 210E2DB026FD9ACE008C8FAA /* IQKeyboardManagerSwift */; };
-		210E2DB426FD9B71008C8FAA /* Localize_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 210E2DB326FD9B71008C8FAA /* Localize_Swift */; };
 		65478DA3291029CCEBECA5AB /* Pods_Integrate_CICD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41593F379714E911D16EAE33 /* Pods_Integrate_CICD.framework */; };
 		D288572BEE7698DC64AA4AEB /* Pods_Integrate_CICD_Integrate_CICDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E5024E5412DD3201A7F0D6 /* Pods_Integrate_CICD_Integrate_CICDUITests.framework */; };
 		FB1E1F18A3B7D3613AB2BCD5 /* Pods_Integrate_CICDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B1E414A60FD6CF76C9A4A7 /* Pods_Integrate_CICDTests.framework */; };
@@ -78,13 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210E2DB126FD9ACE008C8FAA /* IQKeyboardManagerSwift in Frameworks */,
-				210E2DA826FD99F1008C8FAA /* SwiftLintFramework in Frameworks */,
 				65478DA3291029CCEBECA5AB /* Pods_Integrate_CICD.framework in Frameworks */,
-				210E2DAE26FD9A83008C8FAA /* BarcodeScanner in Frameworks */,
-				210E2DA526FD9334008C8FAA /* PINRemoteImage in Frameworks */,
-				210E2DB426FD9B71008C8FAA /* Localize_Swift in Frameworks */,
-				210E2DAB26FD9A3F008C8FAA /* SwiftGenKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,12 +202,6 @@
 			);
 			name = "Integrate CICD";
 			packageProductDependencies = (
-				210E2DA426FD9334008C8FAA /* PINRemoteImage */,
-				210E2DA726FD99F1008C8FAA /* SwiftLintFramework */,
-				210E2DAA26FD9A3F008C8FAA /* SwiftGenKit */,
-				210E2DAD26FD9A83008C8FAA /* BarcodeScanner */,
-				210E2DB026FD9ACE008C8FAA /* IQKeyboardManagerSwift */,
-				210E2DB326FD9B71008C8FAA /* Localize_Swift */,
 			);
 			productName = "Integrate CICD";
 			productReference = 210A22CD26FC945E00546FB8 /* Integrate CICD.app */;
@@ -297,12 +279,6 @@
 			);
 			mainGroup = 210A22C426FC945E00546FB8;
 			packageReferences = (
-				210E2DA326FD9334008C8FAA /* XCRemoteSwiftPackageReference "PINRemoteImage" */,
-				210E2DA626FD99F1008C8FAA /* XCRemoteSwiftPackageReference "SwiftLint" */,
-				210E2DA926FD9A3F008C8FAA /* XCRemoteSwiftPackageReference "SwiftGen" */,
-				210E2DAC26FD9A83008C8FAA /* XCRemoteSwiftPackageReference "BarcodeScanner" */,
-				210E2DAF26FD9ACD008C8FAA /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				210E2DB226FD9B70008C8FAA /* XCRemoteSwiftPackageReference "Localize-Swift" */,
 			);
 			productRefGroup = 210A22CE26FC945E00546FB8 /* Products */;
 			projectDirPath = "";
@@ -847,90 +823,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		210E2DA326FD9334008C8FAA /* XCRemoteSwiftPackageReference "PINRemoteImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pinterest/PINRemoteImage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.3;
-			};
-		};
-		210E2DA626FD99F1008C8FAA /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/SwiftLint";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.44.0;
-			};
-		};
-		210E2DA926FD9A3F008C8FAA /* XCRemoteSwiftPackageReference "SwiftGen" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftGen/SwiftGen";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.4.0;
-			};
-		};
-		210E2DAC26FD9A83008C8FAA /* XCRemoteSwiftPackageReference "BarcodeScanner" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hyperoslo/BarcodeScanner";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
-			};
-		};
-		210E2DAF26FD9ACD008C8FAA /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.5.6;
-			};
-		};
-		210E2DB226FD9B70008C8FAA /* XCRemoteSwiftPackageReference "Localize-Swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/marmelroy/Localize-Swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		210E2DA426FD9334008C8FAA /* PINRemoteImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 210E2DA326FD9334008C8FAA /* XCRemoteSwiftPackageReference "PINRemoteImage" */;
-			productName = PINRemoteImage;
-		};
-		210E2DA726FD99F1008C8FAA /* SwiftLintFramework */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 210E2DA626FD99F1008C8FAA /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = SwiftLintFramework;
-		};
-		210E2DAA26FD9A3F008C8FAA /* SwiftGenKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 210E2DA926FD9A3F008C8FAA /* XCRemoteSwiftPackageReference "SwiftGen" */;
-			productName = SwiftGenKit;
-		};
-		210E2DAD26FD9A83008C8FAA /* BarcodeScanner */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 210E2DAC26FD9A83008C8FAA /* XCRemoteSwiftPackageReference "BarcodeScanner" */;
-			productName = BarcodeScanner;
-		};
-		210E2DB026FD9ACE008C8FAA /* IQKeyboardManagerSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 210E2DAF26FD9ACD008C8FAA /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
-			productName = IQKeyboardManagerSwift;
-		};
-		210E2DB326FD9B71008C8FAA /* Localize_Swift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 210E2DB226FD9B70008C8FAA /* XCRemoteSwiftPackageReference "Localize-Swift" */;
-			productName = Localize_Swift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 210A22C526FC945E00546FB8 /* Project object */;
 }
