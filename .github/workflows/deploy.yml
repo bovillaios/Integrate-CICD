@@ -21,8 +21,6 @@ jobs:
         PROVISIONING_PASSWORD: ${{ secrets.PROVISIONING_PASSWORD }}
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_12.app && /usr/bin/xcodebuild -version
-    - name install Cocoa Pods
-      run: gem install cocoapods
     - name: Pod De Integrate
       run: pod deintegrate
     - name: Pod Run
