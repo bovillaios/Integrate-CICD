@@ -17,7 +17,6 @@
 		210A22F326FC946000546FB8 /* Integrate_CICDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A22F226FC946000546FB8 /* Integrate_CICDUITests.swift */; };
 		210A230626FCB57600546FB8 /* App-Store.plist in Resources */ = {isa = PBXBuildFile; fileRef = 210A230126FCB57600546FB8 /* App-Store.plist */; };
 		210A230726FCB57600546FB8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 210A230226FCB57600546FB8 /* README.md */; };
-		210E2DA226FD92B9008C8FAA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 210E2DA126FD92B9008C8FAA /* Alamofire */; };
 		210E2DA526FD9334008C8FAA /* PINRemoteImage in Frameworks */ = {isa = PBXBuildFile; productRef = 210E2DA426FD9334008C8FAA /* PINRemoteImage */; };
 		210E2DA826FD99F1008C8FAA /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 210E2DA726FD99F1008C8FAA /* SwiftLintFramework */; };
 		210E2DAB26FD9A3F008C8FAA /* SwiftGenKit in Frameworks */ = {isa = PBXBuildFile; productRef = 210E2DAA26FD9A3F008C8FAA /* SwiftGenKit */; };
@@ -86,7 +85,6 @@
 				210E2DA526FD9334008C8FAA /* PINRemoteImage in Frameworks */,
 				210E2DB426FD9B71008C8FAA /* Localize_Swift in Frameworks */,
 				210E2DAB26FD9A3F008C8FAA /* SwiftGenKit in Frameworks */,
-				210E2DA226FD92B9008C8FAA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +214,6 @@
 			);
 			name = "Integrate CICD";
 			packageProductDependencies = (
-				210E2DA126FD92B9008C8FAA /* Alamofire */,
 				210E2DA426FD9334008C8FAA /* PINRemoteImage */,
 				210E2DA726FD99F1008C8FAA /* SwiftLintFramework */,
 				210E2DAA26FD9A3F008C8FAA /* SwiftGenKit */,
@@ -300,7 +297,6 @@
 			);
 			mainGroup = 210A22C426FC945E00546FB8;
 			packageReferences = (
-				210E2DA026FD92B9008C8FAA /* XCRemoteSwiftPackageReference "Alamofire" */,
 				210E2DA326FD9334008C8FAA /* XCRemoteSwiftPackageReference "PINRemoteImage" */,
 				210E2DA626FD99F1008C8FAA /* XCRemoteSwiftPackageReference "SwiftLint" */,
 				210E2DA926FD9A3F008C8FAA /* XCRemoteSwiftPackageReference "SwiftGen" */,
@@ -853,14 +849,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		210E2DA026FD92B9008C8FAA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.4;
-			};
-		};
 		210E2DA326FD9334008C8FAA /* XCRemoteSwiftPackageReference "PINRemoteImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pinterest/PINRemoteImage";
@@ -912,11 +900,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		210E2DA126FD92B9008C8FAA /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 210E2DA026FD92B9008C8FAA /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		210E2DA426FD9334008C8FAA /* PINRemoteImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 210E2DA326FD9334008C8FAA /* XCRemoteSwiftPackageReference "PINRemoteImage" */;

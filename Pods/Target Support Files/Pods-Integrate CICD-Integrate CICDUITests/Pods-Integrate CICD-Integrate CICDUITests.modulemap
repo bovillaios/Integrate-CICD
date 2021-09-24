@@ -1,0 +1,6 @@
+framework module Pods_Integrate_CICD_Integrate_CICDUITests {
+  umbrella header "Pods-Integrate CICD-Integrate CICDUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
