@@ -1,11 +1,7 @@
 name: Hello
 on:
-   workflow_dispatch:
-    inputs:
-      name:
-        description: 'Flavour'
-        required: true
-        default: 'A1 Mercado'
+    repository_dispatch:
+    types: [triggerCI]
 jobs:
 
   Test:
