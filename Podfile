@@ -17,11 +17,11 @@ target 'Integrate CICD' do
  # pod "FlagPhoneNumber"
  # pod "IQKeyboardManager"
  # pod 'BarcodeScanner'
- # pod 'Firebase/Core'
- # pod 'SwiftGen'
- # pod 'SwiftLint'
-  # pod 'Firebase/Messaging'
-  # pod 'Firebase/Performance'
+  pod 'Firebase/Core'
+  pod 'SwiftGen'
+  pod 'SwiftLint'
+   pod 'Firebase/Messaging'
+   pod 'Firebase/Performance'
   target 'Integrate CICDTests' do
     inherit! :search_paths
     # Pods for testing
