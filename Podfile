@@ -6,12 +6,10 @@ target 'Integrate CICD' do
   use_frameworks!
   
   # Pods for Integrate CICD
-  pod "Alamofire"
   pod "AlamofireObjectMapper"
   pod "GooglePlaces"
   pod "GooglePlacePicker"
   pod "GoogleMaps"
-  pod "PINRemoteImage"
  # pod "AXPhotoViewer"
   #pod 'Localize-Swift'
  # pod "FlagPhoneNumber"

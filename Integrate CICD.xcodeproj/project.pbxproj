@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		210A22F326FC946000546FB8 /* Integrate_CICDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A22F226FC946000546FB8 /* Integrate_CICDUITests.swift */; };
 		210A230626FCB57600546FB8 /* App-Store.plist in Resources */ = {isa = PBXBuildFile; fileRef = 210A230126FCB57600546FB8 /* App-Store.plist */; };
 		210A230726FCB57600546FB8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 210A230226FCB57600546FB8 /* README.md */; };
+		210E2DA226FD92B9008C8FAA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 210E2DA126FD92B9008C8FAA /* Alamofire */; };
+		210E2DA526FD9334008C8FAA /* PINRemoteImage in Frameworks */ = {isa = PBXBuildFile; productRef = 210E2DA426FD9334008C8FAA /* PINRemoteImage */; };
 		65478DA3291029CCEBECA5AB /* Pods_Integrate_CICD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41593F379714E911D16EAE33 /* Pods_Integrate_CICD.framework */; };
 		D288572BEE7698DC64AA4AEB /* Pods_Integrate_CICD_Integrate_CICDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E5024E5412DD3201A7F0D6 /* Pods_Integrate_CICD_Integrate_CICDUITests.framework */; };
 		FB1E1F18A3B7D3613AB2BCD5 /* Pods_Integrate_CICDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B1E414A60FD6CF76C9A4A7 /* Pods_Integrate_CICDTests.framework */; };
@@ -73,6 +75,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				65478DA3291029CCEBECA5AB /* Pods_Integrate_CICD.framework in Frameworks */,
+				210E2DA526FD9334008C8FAA /* PINRemoteImage in Frameworks */,
+				210E2DA226FD92B9008C8FAA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +205,10 @@
 			dependencies = (
 			);
 			name = "Integrate CICD";
+			packageProductDependencies = (
+				210E2DA126FD92B9008C8FAA /* Alamofire */,
+				210E2DA426FD9334008C8FAA /* PINRemoteImage */,
+			);
 			productName = "Integrate CICD";
 			productReference = 210A22CD26FC945E00546FB8 /* Integrate CICD.app */;
 			productType = "com.apple.product-type.application";
@@ -276,6 +284,10 @@
 				Base,
 			);
 			mainGroup = 210A22C426FC945E00546FB8;
+			packageReferences = (
+				210E2DA026FD92B9008C8FAA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				210E2DA326FD9334008C8FAA /* XCRemoteSwiftPackageReference "PINRemoteImage" */,
+			);
 			productRefGroup = 210A22CE26FC945E00546FB8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -819,6 +831,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		210E2DA026FD92B9008C8FAA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.4;
+			};
+		};
+		210E2DA326FD9334008C8FAA /* XCRemoteSwiftPackageReference "PINRemoteImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pinterest/PINRemoteImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		210E2DA126FD92B9008C8FAA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 210E2DA026FD92B9008C8FAA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		210E2DA426FD9334008C8FAA /* PINRemoteImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 210E2DA326FD9334008C8FAA /* XCRemoteSwiftPackageReference "PINRemoteImage" */;
+			productName = PINRemoteImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 210A22C526FC945E00546FB8 /* Project object */;
 }
