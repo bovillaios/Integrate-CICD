@@ -1,11 +1,11 @@
-name: CI
-
+name: Hello
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the master branch
-  push:
-    branches:
-      - develop
+   workflow_dispatch:
+    inputs:
+      name:
+        description: 'Flavour'
+        required: true
+        default: 'A1 Mercado'
 jobs:
 
   Test:
