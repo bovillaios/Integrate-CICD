@@ -1,6 +1,0 @@
-framework module Pods_Integrate_CICD {
-  umbrella header "Pods-Integrate CICD-umbrella.h"
-
-  export *
-  module * { export * }
-}
