@@ -1,29 +1,23 @@
 name: Deploy
 
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the master branch
-  push:
-    branches:
-      - develop
+   workflow_dispatch:
+     inputs:
+       flavour:
+         description: 'Flavour'
+         required: true
+         default: 'A1 Mercado'
 jobs:
   Build:
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Install GPG
-      run: brew install gnupg
-    - name: List available Xcode versions
-      run: ls /Applications | grep Xcode
-    - name: Pod De Integrate
-      run: pod deintegrate
-    - name: Pod Run
-      run: pod update
-    - name: Decrypt large secret
-      run: ./.github/secrets/import_provisioning.sh
-      env:
-        PROVISIONING_PASSWORD: ${{ secrets.PROVISIONING_PASSWORD }}
-    - name: Select Xcode
-      run: sudo xcode-select -switch /Applications/Xcode_12.app && /usr/bin/xcodebuild -version
-    - name: Build archive
-      run: xcodebuild -sdk iphoneos -workspace Integrate\ CICD.xcworkspace -configuration Release -scheme Integrate\ CICD -derivedDataPath DerivedData -archivePath DerivedData/Archive/Integrate\ CICD archive
+      - name: Get token
+        id: asc
+        uses: yuki0n0/action-appstoreconnect-token@v1.0
+        with:
+          issuer id: ${{ '6f7fe27a-4389-41be-91f3-b610e784c278' }}
+          key id: ${{ 'QU39T4998C' }}
+          key: ${{ 'LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR1RBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJIa3dkd0lCQVFRZzVyRFRJcDdScFY2OVNWRWkKL0YrZkp6ZnBVN2xNMWJLM1UxTWVGbThWeXlxZ0NnWUlLb1pJemowREFRZWhSQU5DQUFRSmlOKzk2MG5HSXdQVQp1QUJlbHUxczNteFNtdlFqU085emNDbHFHRWExeDFEWmhRUGJCZUlXOGpCdGZGOVpkM2pYaU9BWDFmTGdtQlNZCjAwZk0wVzBYCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0=' }}
+      - name: Use token
+       run: |
+        JSON=`curl -sS -H "Authorization:Bearer ${{ steps.asc.outputs.token }}" https://api.appstoreconnect.apple.com/v1/apps`
