@@ -18,7 +18,6 @@ jobs:
         with:
           issuer id: ${{ '6f7fe27a-4389-41be-91f3-b610e784c278' }}
           key id: ${{ 'QU39T4998C' }}
-          key: ${{ 'LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR1RBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJIa3dkd0lCQVFRZzVyRFRJcDdScFY2OVNWRWkKL0YrZkp6ZnBVN2xNMWJLM1UxTWVGbThWeXlxZ0NnWUlLb1pJemowREFRZWhSQU5DQUFRSmlOKzk2MG5HSXdQVQp1QUJlbHUxczNteFNtdlFqU085emNDbHFHRWExeDFEWmhRUGJCZUlXOGpCdGZGOVpkM2pYaU9BWDFmTGdtQlNZCjAwZk0wVzBYCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0=' }}
       - name: Use token
        run: |
         JSON=`curl -sS -H "Authorization:Bearer ${{ steps.asc.outputs.token }}" https://api.appstoreconnect.apple.com/v1/apps`
