@@ -11,3 +11,13 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Get token
+        id: asc
+        uses: yuki0n0/action-appstoreconnect-token@v1.0
+        with:
+          issuer id: 00000000-0000-0000-0000-000000000000
+          key id: AAAAAAAAAA
+          key: ${{ secrets.KEY }}
+      - name: Use token
+        run: |
+          JSON=`curl -sS -H "Authorization:Bearer ${{ steps.asc.outputs.token }}" https://api.appstoreconnect.apple.com/v1/apps`
