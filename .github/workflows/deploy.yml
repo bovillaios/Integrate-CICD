@@ -1,5 +1,4 @@
 name: Deploy
-
 on:
    workflow_dispatch:
      inputs:
@@ -12,12 +11,3 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Get token
-        id: asc
-        uses: yuki0n0/action-appstoreconnect-token@v1.0
-        with:
-          issuer id: ${{ '6f7fe27a-4389-41be-91f3-b610e784c278' }}
-          key id: ${{ 'QU39T4998C' }}
-      - name: Use token
-       run: |
-        JSON=`curl -sS -H "Authorization:Bearer ${{ steps.asc.outputs.token }}" https://api.appstoreconnect.apple.com/v1/apps`
