@@ -22,5 +22,4 @@ jobs:
         run: |
          echo $${ steps }
          echo $${ steps.asc.outputs.token }
-         curl -v -H "Authorization:Bearer ${{ steps.asc.outputs.token }}" 
-         "https://api.appstoreconnect.apple.com/v1/apps"
+         curl  https://api.appstoreconnect.apple.com/v1/users --Header "Authorization: Bearer  ${{ steps.asc.outputs.token }}"
