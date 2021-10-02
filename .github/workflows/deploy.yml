@@ -20,4 +20,4 @@ jobs:
           key: ${{ secrets.KEY }}
       - name: Use token
         run: |
-          'curl -sS -H "Authorization:Bearer ${{ steps.asc.outputs.token }}" https://api.appstoreconnect.apple.com/v1/apps' | json_pp 
+          'curl -sS -H "Authorization:Bearer ${{ steps.asc.outputs.token }}" https://api.appstoreconnect.apple.com/v1/apps'
