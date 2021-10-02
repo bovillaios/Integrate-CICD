@@ -11,6 +11,7 @@ jobs:
   Build:
     runs-on: macOS-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Get token
         id: asc
         uses: yuki0n0/action-appstoreconnect-token@v1.0
